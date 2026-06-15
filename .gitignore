@@ -1,0 +1,5 @@
+/dist/
+/xray-streisand-helper
+.codewhale/
+*.test
+coverage.out
