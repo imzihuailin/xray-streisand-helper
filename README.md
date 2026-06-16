@@ -41,7 +41,6 @@ sudo xray-streisand-helper setup --force
 xray-streisand-helper setup [--force]  安装或复用有效配置
 xray-streisand-helper show             验证默认安装并显示链接和终端二维码
 xray-streisand-helper link [yaml]      stdout 仅输出 VLESS 链接
-xray-streisand-helper serve [yaml]     启动临时本地二维码网页
 xray-streisand-helper doctor           检查平台、文件、服务、443、DNS 和配置一致性
 xray-streisand-helper --version
 ```

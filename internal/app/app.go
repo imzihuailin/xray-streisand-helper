@@ -18,7 +18,6 @@ import (
 	"github.com/imzihuailin/xray-streisand-helper/internal/system"
 	"github.com/imzihuailin/xray-streisand-helper/internal/terminalqr"
 	"github.com/imzihuailin/xray-streisand-helper/internal/upstream"
-	"github.com/imzihuailin/xray-streisand-helper/internal/webui"
 )
 
 type App struct {
@@ -66,21 +65,6 @@ func (a *App) Run(ctx context.Context, args []string) error {
 			path = args[1]
 		}
 		return a.printLink(path)
-	case "serve":
-		path := a.YAMLPath
-		if len(args) > 2 {
-			return errors.New("usage: serve [yaml]")
-		}
-		if len(args) == 2 {
-			path = args[1]
-		}
-		link, err := loadLink(path)
-		if err != nil {
-			return err
-		}
-		return (webui.Server{}).Run(ctx, link, func(u string) {
-			fmt.Fprintf(a.Out, "Open through an SSH tunnel: %s\n", u)
-		})
 	case "doctor":
 		return a.doctor(ctx)
 	case "--version", "version":
@@ -101,7 +85,6 @@ Usage:
   xray-streisand-helper setup [--force]
   xray-streisand-helper show
   xray-streisand-helper link [yaml]
-  xray-streisand-helper serve [yaml]
   xray-streisand-helper doctor
   xray-streisand-helper --version`)
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="v0.1.0"
+VERSION="v0.1.1"
 REPO="imzihuailin/xray-streisand-helper"
 
 fail() { printf 'Error: %s\n' "$*" >&2; exit 1; }
