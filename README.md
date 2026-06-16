@@ -3,6 +3,8 @@
 利用 xray-installer 在 Debian/Ubuntu VPS 上安装 Xray Reality，并把由 xray-installer (https://github.com/manateelazycat/xray-installer) 生成的 proxy.yaml
 转换成可由 Streisand 扫码导入的 VLESS 链接。
 
+<img src="xray-helper演示截图.png "width="800">
+
 ## 要求
 
 - 装有 Debian 或 Ubuntu 的 VPS 
